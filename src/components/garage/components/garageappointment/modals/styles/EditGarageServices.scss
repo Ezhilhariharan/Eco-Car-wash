@@ -1,0 +1,74 @@
+@use "../../../../../../scss/abstract" as *;
+
+.garage-appointment-service-data {
+  .title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    // justify-content: space-between;
+
+    @include themed() {
+      color: t($text-grey);
+    }
+  }
+  .data {
+    font-size: 1.1rem;
+    max-height: 50vh;
+    overflow-y: auto;
+
+    .heading {
+      font-weight: 500;
+
+      @include themed() {
+        color: t($secondary);
+      }
+    }
+  }
+}
+
+.service-platter {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  // justify-content: space-between;
+
+  .service-name {
+    position: relative;
+    padding-left: 17px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 6.5px;
+      left: 0px;
+      // transform: translateY(-50%);
+      border-radius: 50%;
+
+      @include themed() {
+        background: t($primary);
+      }
+    }
+  }
+  .service-price {
+  }
+}
+
+.service-image-container-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+
+  .service-image-container {
+    flex: 1;
+    width: 80%;
+    // min-height: 15rem;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}

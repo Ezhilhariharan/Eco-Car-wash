@@ -1,0 +1,420 @@
+@use "../../../scss/abstract/" as *;
+.scroll_dashboards {
+    height: 100vh;
+    overflow: scroll;
+    padding-bottom: 13vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+
+    @include lgBreakPoint {
+        padding-bottom: 5vh;
+    }
+    @include xlBreakPoint {
+        padding-bottom: 13vh;
+    }
+    .dashboard {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .start_user_list {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            @include lgBreakPoint {
+                width: 100%;
+                gap: 10px;
+            }
+            @include xlBreakPoint {
+                gap: 20px;
+                width: 100%;
+            }
+            .box_1 {
+                height: 96px;
+                width: 280px;
+                display: flex;
+                justify-content: space-around;
+                background: #ffffff;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+                padding: 5px 0px;
+
+                .user_content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .texts {
+                        font-size: 16px;
+                        font-weight: 600;
+                        @include lgBreakPoint {
+                            font-size: 14px;
+                        }
+                    }
+                    .number {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: rgba(0, 0, 0, 0.66);
+                        @include lgBreakPoint {
+                            font-size: 28px;
+                        }
+                    }
+                }
+                .empty {
+                    width: 73px;
+                    height: 82px;
+                    background-color: $back_bg_dash;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include lgBreakPoint {
+                        width: 50px;
+                    }
+                    @include xlBreakPoint {
+                        width: 60px;
+                    }
+                }
+                .icon {
+                    padding-top: 6px;
+                    .icons {
+                        width: 100px;
+                        border-radius: 50%;
+                        padding: 7px;
+                        object-fit: cover;
+                        background: #ffffff;
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+        }
+
+        .dashboardgraph {
+            height: 40%;
+            display: flex;
+            gap: 25px;
+            .months {
+                display: flex;
+                gap: 10px;
+                .circle_color {
+                    color: $primary--dark;
+                }
+            }
+        }
+
+        .dashboard-bargraph {
+            height: 100%;
+            background: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dashboard-piechart {
+            width: 400px;
+            height: 100%;
+            background: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+
+            .chart {
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .dashboard-piechart-title {
+                font-family: Raleway;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        .start-main-charts {
+            // background-color: red;
+            width: 100%;
+        //   height: 100%;
+            display: flex;
+            gap: 20px;
+         
+            // .left_chart {
+            //     width: 70%;
+            //     border: 2px solid blue;
+            //     padding:10px;
+            // }
+            // .right_chart {
+            //     width: 30%;
+            //     border: 2px solid orange;
+            // }
+        }
+        .rateandreview-modal {
+            width: 100%;
+            height: auto;
+            background: rgba(196, 196, 196, 0.14);
+            border-radius: 10px;
+        }
+        .dropdown-select {
+            width: 201px;
+            height: 36px;
+            background: #ffffff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 9px;
+            border: none;
+        }
+        .dropdown-select:focus {
+            outline: none;
+        }
+        .dashboard-piechart-viewmore {
+            background-color: white;
+            width: 100%;
+
+            // border: 2px solid red;
+        }
+        .dash_count {
+            // background-color: blue;
+            width: 100%;
+            height: 100%;
+            // border: 4px solid blue;
+        }
+        .feed_backs {
+            display: flex;
+            width: 100%;
+            gap: 20px;
+            padding-top: 1vh;
+            @include lgBreakPoint {
+                width: 100%;
+            }
+            @include xlBreakPoint {
+                width: 100%;
+            }
+            @include xxlBreakPoint {
+                width: 100%;
+            }
+
+            .start {
+                width: 40%;
+                padding-left: 10px;
+                height: 300px;
+                background-color: white;
+                box-shadow: $shadow-lg--dark;
+                border-radius: 10px;
+                @include lgBreakPoint {
+                    width: 100%;
+                }
+                @include xlBreakPoint {
+                    width: 100%;
+                }
+                @include xxlBreakPoint {
+                    width: 100%;
+                }
+                .interior {
+                    .dots_content {
+                        display: flex;
+                        gap: 50px;
+                        padding: 40px;
+                        .names1 {
+                            display: flex;
+                            gap: 10px;
+                            .circles {
+                                color: $primary--light;
+                            }
+                        }
+                        .names {
+                            display: flex;
+                            gap: 10px;
+                            background-color: rgba(196, 196, 196, 0.22);
+                            border-radius: 10px;
+                            padding: 5px;
+                            .circle_1 {
+                                font-size: 15px !important;
+                            }
+                            .exterior {
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .middle {
+                width: 40%;
+                height: 300px;
+                border-radius: 10px;
+                background-color: white;
+                box-shadow: $shadow-lg--dark;
+
+                @include lgBreakPoint {
+                    width: 100%;
+                }
+                @include xlBreakPoint {
+                    width: 100%;
+                }
+                @include xxlBreakPoint {
+                    width: 100%;
+                }
+
+                .feed_conten_split {
+                    display: flex;
+                    justify-content: space-between;
+                    height: 10%;
+                    padding: 10px 20px;
+                }
+                .circles_size {
+                    display: flex;
+                    gap: 50px;
+                    height: 37.5%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px;
+                    @include lgBreakPoint {
+                        gap: 10px;
+                    }
+                    @include xlBreakPoint {
+                        gap: 30px;
+                    }
+                }
+                .back_content {
+                    height: 49%;
+                    overflow-y: auto;
+                    padding-top: 4px;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    overflow-y: scroll;
+                    border-top: 1px solid lightgray;
+                    @include lgBreakPoint {
+                        height: 50%;
+                    }
+                    @include xlBreakPoint {
+                        height: 50%;
+                    }
+                    @include xxlBreakPoint {
+                        height: 50%;
+                    }
+                    .box_splits {
+                        .main_inside {
+                            display: flex;
+
+                            .left_person_image {
+                                width: 80%;
+                                display: flex;
+                                .left_number {
+                                    width: 10%;
+                                    padding: 10px;
+                                }
+                                .right_person_images {
+                                    width: 90%;
+                                    display: flex;
+                                    gap: 30px;
+                                    .inside_right_image_person {
+                                        .dog {
+                                            width: 60px;
+                                            height: 60px;
+                                            border-radius: 50%;
+                                            object-fit: cover;
+                                        }
+                                    }
+                                    .checked {
+                                        color: orange;
+                                    }
+                                }
+                            }
+                            .numbers {
+                                width: 20%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .end {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                gap: 6%;
+                @include lgBreakPoint {
+                    width: 100%;
+                }
+                @include xlBreakPoint {
+                    width: 100%;
+                }
+                @include xxlBreakPoint {
+                    width: 100%;
+                }
+                .box_split_1 {
+                    display: flex;
+                    justify-content: space-around;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    padding: 20px 0px;
+                    background-color: white;
+
+                    .empty {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        background-color: $back_bg_dash;
+                        width: 30%;
+                        height: 100px;
+                        border-radius: 10px;
+                    }
+                    .app_download {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+                .box_split_2 {
+                    display: flex;
+                    justify-content: space-around;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    padding: 20px 0px;
+                    background-color: white;
+
+                    .empty {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        background-color: $back_bg_dash;
+                        width: 30%;
+                        height: 100px;
+                        border-radius: 10px;
+                    }
+                    .app_downloads {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    .arrows {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .arrow {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background: $secondary--light;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@use "../../../../../scss/abstract" as *;
+
+.store-appointments {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .store-appointments-head {
+        height: 12%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            width: 20%;
+        }
+
+        .btn-navy-circle{
+            width: 30px;
+            height: 30px;
+        }
+
+        .absentee-section {
+            height: 100%;
+            width: 80%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+
+            .absentee-tab {
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                padding-right: 5px;
+                margin: 0 10px;
+
+                @include themed() {
+                    background-color: t($background-alt);
+                    box-shadow: t($shadow-sm);
+                }
+
+                .absentee-profile-picture {
+                    border-radius: 50px !important;
+                    overflow: hidden;
+                    width: 40px;
+                    height: 40px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .store-appointments-body {
+        height: 88%;
+        width: 100%;
+        display: flex;
+
+        .appointments-calendar {
+            width: 27rem;
+            height: 15rem;
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            padding: 20px 30px;
+            border-radius: 15px;
+
+            @include themed() {
+                background-color: t($secondary);
+                color: t($input-focused);
+            }
+
+            .date {
+                font-size: 2rem;
+                font-weight: 400;
+            }
+
+            .appointment-count {
+                padding-left: 30px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: 6.5px;
+                    left: 10px;
+                    // transform: translateY(-50%);
+                    border-radius: 50%;
+
+                    @include themed() {
+                        background: t($primary);
+                    }
+                }
+            }
+
+            .month-setter{
+                position: relative;
+                i{
+                    position: absolute;
+                    right: 7px;
+                    bottom: 12px;
+                    pointer-events: all;
+                    
+                    @include themed(){
+                        color: t($text-black) !important;
+                    }
+                }
+            }
+
+            li {
+                font-size: 15px;
+            }
+            li::before {
+                text-align: center;
+                content: "\25C9";
+                color: #6ddfd8;
+                font-weight: bold;
+                padding-right: 10px;
+                display: inline-block;
+            }
+
+            .header {
+                height: 10%;
+                width: 100%;
+                display: flex;
+            }
+
+            .calendar-current {
+                height: 45%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 50px;
+                // background-color:black;
+            }
+
+            .calendar-next {
+                height: 45%;
+                width: 100%;
+                display: flex;
+            }
+        }
+
+        .appointments-table {
+            width: calc(100% - 27rem);
+            height: 100%;
+            background-color: #f8f8f8;
+            overflow: hidden;
+        }
+    }
+}

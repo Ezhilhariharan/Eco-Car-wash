@@ -1,0 +1,42 @@
+
+.garage-list-layout{
+	width: 100%;
+	height: 100%;
+
+	.garage-empty{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.btn-navy{
+			width: 15vw
+		}
+	}
+	.garage-list{
+		width: 100%;
+		height: 100%;
+
+		.garage-list-header{
+			width: 100%;
+			height: 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.title{
+				font-size: 2.5rem;
+				font-weight: 600;
+			}
+
+			.btn-white{
+				width: 5rem;
+			}
+		}
+		.garage-table{
+			width: 100%;
+			height: 90%;
+		}
+	}
+}

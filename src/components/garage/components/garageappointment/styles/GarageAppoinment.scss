@@ -1,0 +1,182 @@
+@use "../../../../../scss/abstract" as *;
+
+.garage-appointment-details-layout {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	gap: 20px;
+
+	.garage-appointment-details {
+		width: 25%;
+		height: 100%;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		// justify-content: center;
+
+		@include themed() {
+			background: t($background-alt);
+			color: t($text-black);
+			box-shadow: t($shadow-sm);
+		}
+		.btn-navy-circle {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: 10px;
+			left: 5px;
+		}
+		.garage-appointment-details-header {
+			width: 100%;
+			height: 15%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.title {
+				font-size: 1.5rem;
+				font-weight: 500;
+				text-align: center;
+			}
+		}
+		.garage-appointment-details-body {
+			width: 100%;
+			height: 70%;
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			justify-content: flex-start;
+
+			.profile {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: 0 auto;
+				// flex: 150px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					object-fit: cover;
+				}
+			}
+			.name {
+				font-size: 1.3rem;
+				font-weight: 700;
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.user-data {
+				margin-left: 20%;
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+
+				.title {
+					font-size: 0.8rem;
+					font-weight: 600;
+
+					@include themed() {
+						color: t($text-grey);
+					}
+				}
+				.data {
+					margin-top: 6px;
+					overflow-y: auto;
+				}
+			}
+		}
+		.garage-appointment-details-cleaner {
+			width: 100%;
+			height: 15%;
+			display: flex;
+			overflow-y: auto;
+			padding: 0 15px;
+			.cleaners_active {
+				// border: 1px solid red !important;
+				background-color: $secondary--light !important;
+				color: white !important;
+			}
+			.cleaner-card {
+				display: flex;
+				align-items: center;
+				width: 10rem;
+				height: 4rem;
+				padding: 5px;
+				border-radius: 10px;
+				background-color: $primary-lightened;
+				margin-right: 10px;
+				cursor: pointer !important;
+				// border: 1px solid red;
+				@include themed() {
+					box-shadow: t($shadow-sm);
+				}
+
+				&:last-child {
+					margin-right: none;
+				}
+
+				.profile {
+					width: 50px;
+					height: 50px;
+					background: red;
+					border-radius: 50%;
+					overflow: hidden;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
+				}
+				.data {
+					width: calc(100% - 50px);
+					height: 100%;
+					padding-left: 10px;
+
+					.title {
+						font-size: 0.8rem;
+						font-weight: 600;
+
+						@include themed() {
+							color: t($text-grey);
+						}
+					}
+					.name {
+						font-size: 1.1rem;
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+		}
+	}
+	.garage-appointment-list-outer {
+		width: calc(100% - 25% - 20px);
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.garage-appointment-list-outer-header {
+			width: 100%;
+			height: 8%;
+			select {
+				border: 1px solid lightgray;
+				border-radius: 5px;
+				min-width: 50px;
+			}
+		}
+		.garage-appointment-list {
+			width: 100%;
+			height: calc(100% - 8% - 20px);
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@use "variables" as *;
+
+$primary: "primary";
+$secondary: "secondary";
+
+$background: "background";
+$background-alt: "background-alt";
+
+$text-black: "text-black";
+$text-white: "text-white";
+$text-grey: "text-grey";
+
+$input-focused: "input-focused";
+
+$inverter: "inverter";
+
+$text: "text";
+$nav-text: "nav-text";
+$shadow-lg: "shadow-lg";
+$shadow-md: "shadow-md";
+$shadow-sm: "shadow-sm";
+$button-config: "button-config";
+$text-hover: "text-hover";
+$frosted: "frosted";
+
+$themes: (
+    light: (
+        primary: $primary--light,
+        secondary: $secondary--light,
+        background: $background--light,
+        background-alt: $background-alt--light,
+        text-black: $text-black--light,
+        text-white: $text-white--light,
+        text-grey: $text-grey--light,
+        text: $text--light,
+        nav-text: $nav-text--light,
+        shadow-lg: $shadow-lg--light,
+        shadow-md: $shadow-md--light,
+        shadow-sm: $shadow-sm--light,
+        input-focused: $input-focused--light,
+        button-config: $button-config-light,
+        text-hover: $text-hover-light,
+        inverter: $inverter--light,
+        frosted: $frosted-light,
+    ),
+    dark: (
+        primary: $primary--dark,
+        secondary: $secondary--dark,
+        background: $background--dark,
+        background-alt: $background-alt--dark,
+        text-black: $text-black--dark,
+        text-white: $text-white--dark,
+        text-grey: $text-grey--dark,
+        text: $text--dark,
+        nav-text: $nav-text--dark,
+        shadow-lg: $shadow-lg--dark,
+        shadow-md: $shadow-md--dark,
+        shadow-sm: $shadow-sm--dark,
+        input-focused: $input-focused--dark,
+        button-config: $button-config-dark,
+        text-hover: $text-hover-dark,
+        inverter: $inverter--dark,
+        frosted: $frosted-dark,
+    ),
+);

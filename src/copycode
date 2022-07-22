@@ -1,0 +1,40 @@
+ {/* <div className="text-content-main">
+                                <div className="start-content-left">
+                                    <span>
+                                        <i className="fas fa-circle circle_1"></i>
+                                    </span>
+                                    <span onClick={() => this.numbersChange(1)}>
+                                        Interior
+                                    </span>
+                                </div>
+                                <div className="end-content-right">
+                                    <span>
+                                        <i className="fas fa-circle circle_2"></i>
+                                    </span>
+                                    <span onClick={() => this.numbersChange(2)}>
+                                        Exterior
+                                    </span>
+                                </div>
+                            </div> */}
+                            {/* <div className="service-charts-image">
+                                <ServiceChart
+                                    std={this.state.stdLabels}
+                                    stdct={this.state.stdCountno}
+                                    ove={this.state.overData}
+                                />
+                                <div className="card">
+                                    <Chart
+                                        type="bar"
+                                        data={this.basicData}
+                                        options={horizontalOptions}
+                                        className="horizontal"
+                                        style={{
+                                            width: "90%",
+                                            height: "40vh",
+                                            marginTop: "auto",
+                                        }}
+                                        ref={this.myRef}
+                                    />
+                                    <ChartService />
+                                </div>
+                            </div> */}

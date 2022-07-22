@@ -1,0 +1,155 @@
+@use "../../../../../../../scss/abstract" as *;
+
+.service-mapping-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .cartype-selection-card {
+        width: 100%;
+        height: 45%;
+        border-radius: 10px;
+
+        @include themed() {
+            background: t($background-alt);
+            box-shadow: t($shadow-sm);
+        }
+
+        .cartype-card-header {
+            width: 100%;
+            height: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid lightgray;
+
+            .btn-navy-circle {
+                width: 30px;
+                height: 30px;
+            }
+
+            h4 {
+                padding-top: 5px;
+            }
+        }
+        .cartype-card-body {
+            width: 100%;
+            height: calc(100% - 3.1rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .cartype-list {
+                width: 100%;
+                height: auto;
+
+                span {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+
+                .cartype-item {
+                    width: 100%;
+                    height: 3rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 20px;
+
+                    .btn-navy-circle {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .service-listing-card {
+        width: 100%;
+        height: 53%;
+        border-radius: 10px;
+
+        @include themed() {
+            background: t($background-alt);
+            box-shadow: t($shadow-sm);
+        }
+
+        .service-card-header {
+            width: 100%;
+            height: 3rem;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .btn-navy {
+                width: 6rem;
+                height: 2rem;
+            }
+            h4 {
+                padding-top: 3px;
+            }
+        }
+        .service-card-body {
+            width: 100%;
+            height: calc(100% - 3.1rem);
+            overflow-y: auto;
+            padding: 0 10px;
+
+            .cartype-section {
+                padding: 10px 0px 10px 20px;
+                border-bottom: 1px solid lightgrey;
+
+                .cartype-name {
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    border-bottom: 1px solid lightgrey;
+                }
+                .service-section {
+                    padding: 5px 20px 0px 20px;
+                    
+                    .service-name {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        border-bottom: 1px solid lightgrey;
+                    }
+                    .service-list {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px 0px 0px 20px;
+
+                        .service-item {
+                            font-size: 0.9rem;
+                            font-weight: 500;
+                            color: gray;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 7px;
+                                height: 7px;
+                                top: 10px;
+                                left: -15px;
+                                transform: translateY(-50%);
+                                border-radius: 50%;
+                                
+                                @include themed() {
+                                    background: t($primary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .cartype-section:last-child {
+                border-bottom: unset;
+            }
+        }
+    }
+}

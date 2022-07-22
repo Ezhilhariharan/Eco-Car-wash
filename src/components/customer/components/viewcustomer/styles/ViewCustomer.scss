@@ -1,0 +1,298 @@
+@use "../../../../../scss/abstract" as *;
+
+.viewcustomer-layout {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	gap: 20px;
+
+	.customer-details {
+		width: 57%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		.customer_details_card {
+			width: 100%;
+			height: 50%;
+			border-radius: 10px;
+			display: flex;
+			overflow: hidden;
+			.start-back {
+				width: 8%;
+				display: flex;
+				padding: 10px;
+				justify-content: center;
+			}
+			.start-content {
+				width: 22%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				.image {
+					// padding-bottom: 2vh;
+					width: 150px !important;
+					height: 150px !important;
+					border-radius: 50%;
+					// border: 1px solid red;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+			.middle_address {
+				width: 32%;
+				display: flex;
+				flex-direction: column;
+				.phone {
+					height: 30%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+				.email {
+					height: 30%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+				.address {
+					height: 40%;
+					text-align: center;
+					.inside_scroll_address {
+						height: 80%;
+						overflow: hidden;
+						overflow-y: auto;
+						text-align: center;
+					}
+				}
+			}
+			.end-list_address {
+				width: 38%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			@include themed() {
+				background: t($background-alt);
+				color: t($text-black);
+				box-shadow: t($shadow-sm);
+			}
+
+			.card {
+				width: 80%;
+				height: 80%;
+				display: flex;
+				padding: 0px !important;
+				text-align: center;
+				border-radius: 10px !important;
+				outline: none !important;
+				border: none !important;
+
+				@include themed() {
+					background-color: t($secondary) !important;
+				}
+			}
+
+			.card-body {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px !important;
+				// border: 1px solid red;
+			}
+
+			h4,
+			p {
+				font-weight: normal;
+
+				@include themed() {
+					color: t($text-white);
+				}
+			}
+			.address-scroll {
+				.inside_scroll_address {
+					overflow: hidden;
+					overflow-y: scroll;
+					height: 115px;
+					padding: 10px;
+				}
+			}
+		}
+		.customer-extra-details {
+			width: 100%;
+			height: calc(100% - 50% - 20px);
+			display: flex;
+			gap: 20px;
+
+			.customer-appointments {
+				width: 40%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				border-radius: 10px;
+
+				@include themed() {
+					background: t($background-alt);
+					color: t($text-black);
+					box-shadow: t($shadow-sm);
+				}
+			}
+			.customer-ratings {
+				width: calc(100% - 40% - 20px);
+				height: 100%;
+
+				border-radius: 10px;
+
+				@include themed() {
+					background: t($background-alt);
+					color: t($text-black);
+					box-shadow: t($shadow-sm);
+				}
+
+				.card {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					padding: 0px !important;
+					text-align: center;
+					border-radius: 10px !important;
+					outline: none !important;
+					border: none !important;
+
+					@include themed() {
+						background: t($background-alt);
+						color: t($text-black);
+						box-shadow: t($shadow-sm);
+					}
+				}
+
+				.card-body {
+					width: 100%;
+					height: 100%;
+					border-radius: 10px !important;
+				}
+
+				.customer-profile-picture {
+					border-radius: 50px;
+					overflow: hidden;
+					width: 60px;
+					height: 60px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				.checked {
+					color: orange;
+					border: none !important;
+					outline: none !important;
+				}
+
+				.customer-reviews-block {
+					height: 90%;
+					width: 100%;
+					overflow: scroll;
+				}
+				.customer-reviews-element {
+					height: 40%;
+					margin: 25px 10px 25px 0px;
+					text-align: justify;
+				}
+				.review-content {
+				}
+
+				.drop-down,
+				.drop-down:active,
+				.drop-down:hover,
+				.drop-down:focus {
+					border-radius: 5px;
+					height: 35px;
+					width: 115px;
+					border: none !important;
+					// border: 1px solid red;
+					outline: none !important;
+
+					@include themed() {
+						background-color: t($background-alt);
+						color: t($text-black);
+						box-shadow: t($shadow-lg);
+					}
+				}
+			}
+		}
+	}
+	.invoice-details {
+		width: calc(100% - 57% - 20px);
+		height: 100%;
+		border-radius: 10px;
+
+		@include themed() {
+			background: t($background-alt);
+			color: t($text-black);
+			box-shadow: t($shadow-sm);
+		}
+
+		.invoice-header {
+			width: 100%;
+			height: 4rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+
+			.btn-navy {
+				width: 6rem;
+				height: 2rem;
+				font-weight: 500;
+
+				@include themed() {
+					box-shadow: t($shadow-sm);
+
+					&:hover {
+						background: t($primary);
+						color: t($text-black);
+					}
+				}
+			}
+		}
+		.invoice-list {
+			width: 100%;
+			height: calc(100% - 4.1rem);
+			padding: 0 10px;
+
+			.p-datatable {
+				height: 100% !important;
+
+				.p-datatable-scrollable-wrapper {
+					height: 100% !important;
+
+					.p-datatable-scrollable-view {
+						height: 100% !important;
+
+						.p-datatable-scrollable-body {
+							max-height: 90% !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.invoiceModal {
+		.modal-content {
+			height: 80vh !important;
+		}
+	}
+}

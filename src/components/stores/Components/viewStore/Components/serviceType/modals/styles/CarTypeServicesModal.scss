@@ -1,0 +1,78 @@
+@use "../../../../../../../../scss/abstract" as *;
+
+.cartype-services-modal{
+	height: 80vh;
+
+	.servicetype-selection-container{
+		width: 100%;
+		height: 4rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $primary-lightened;
+
+		.servicetype{
+			width: 6rem;
+			height: 3rem;
+			margin: 0 5rem;
+			font-size: 1.5rem;
+			font-weight: 500;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.selected {
+			font-weight: 400;
+
+			@include themed() {
+				background: t($secondary);
+				color: t($text-white);
+			}
+		}
+	}
+	.servicetype-container{
+		width: 100%;
+		height: calc(100% - 4rem);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.service-nature-container{
+			width: 50%;
+			height: 100%;
+			padding: 0 10px;
+			
+			.service-nature-header{
+				width: 100%;
+				height: 3rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.3rem;
+				font-weight: 500;
+			}
+			.service-nature-list{
+				width: 100%;
+				height: calc(100% - 3rem);
+				overflow-y: auto;
+				padding-left: 4vw;
+
+				.service-item {
+					display: flex;
+					align-items: center;
+					height: 2.5rem;
+					font-size: 1.1rem;
+
+					input {
+						margin-right: 10px;
+						width: 15px;
+						height: 15px;
+					}
+				}
+			}
+		}
+	}
+}

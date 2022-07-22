@@ -1,0 +1,75 @@
+@use '../../../scss/abstract' as *;
+
+.configuration-section {
+    height: 100%;
+    width: 100%;
+   
+    .configuration-dashboard {
+        height: 25%;
+    }
+    .configuration-body {
+        height: 75%;
+    }
+
+    .tabs{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+
+        @include noSelectionAllowed;
+    }
+
+    .tabs.active{
+        background-color: #D8F9F8;
+    }
+   
+    .line{
+        width: 100%;
+       
+
+        @include themed(){
+            border-bottom: 1px solid t($text);
+        }
+        }
+
+
+    .modal {
+        .modal-content {
+            @include themed() {
+                background-color: t($button-config) !important;
+            }
+
+            .modal-body {
+                //margin: 3% 60% 0% 60% !important;
+
+                input {
+                    width: 300px;
+                    height: 40px;
+                    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+                    border: none !important;
+
+                    @include themed() {
+                        background-color: t($input-focused);
+                    }
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .modal-footer {
+                padding-bottom: 40px;
+
+                .btn-navy {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

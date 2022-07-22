@@ -1,0 +1,22 @@
+@use "../../../../../scss/abstract/" as *;
+
+.car-type-layout {
+    height: 100%;
+    width: 100%;
+
+    .car-type-header {
+        display: flex;
+        height: 10%;
+        justify-content: space-between;
+
+        .car-type-title {
+            font-size: 2rem;
+        }
+        .btn-navy {
+            width: 5rem;
+        }
+    }
+    .car-type-list {
+        height: 90%;
+    }
+}

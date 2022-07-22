@@ -1,0 +1,29 @@
+@use '../../../../../scss/abstract' as *;
+
+
+.con-tabs, .con-tabs:hover{
+        width: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+        text-decoration: none; 
+        color: black;
+
+        @include noSelectionAllowed;
+    }
+
+    .con-tabs.active{
+        background-color: #04294B;
+        color: #ffffff;
+    }
+   
+    .line{
+        width: 100%;
+       
+
+        @include themed(){
+            border-bottom: 1px solid t($text);
+        }
+        }

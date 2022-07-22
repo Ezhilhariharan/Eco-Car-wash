@@ -1,0 +1,23 @@
+@use "../../../../../../scss/abstract/" as *;
+
+.slider_after {
+    width: 100%;
+
+    // img {
+    //     width: 310px;
+    //     height: 150px;
+    //     border-radius: 10px;
+    //     outline: none;
+    //     border: none;
+    //     object-fit: cover;
+    //     @include mdBreakPoint {
+    //         height: 40px;
+    //     }
+    //     @include lgBreakPoint {
+    //         height: 200px !important;
+    //     }
+    //     @include xlBreakPoint {
+    //         height: 120px;
+    //     }
+    // }
+}

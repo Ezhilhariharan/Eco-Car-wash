@@ -1,0 +1,22 @@
+@use "scss" as *;
+
+.eco-app {
+  width: 100vw;
+  @include themed() {
+    background: t($background);
+    color: t($text);
+  }
+}
+.toast-style {
+  font-size: 14px !important;
+  min-height: 40px !important;
+  @include themed() {
+    background-color: t($secondary) !important;
+    color: t($primary) !important;
+  }
+   .p-toast-icon-close{
+    @include themed() {     
+      color: t($primary) !important;
+    }
+  }
+  }

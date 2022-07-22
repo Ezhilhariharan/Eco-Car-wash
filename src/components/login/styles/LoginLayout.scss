@@ -1,0 +1,121 @@
+@use "../../../scss/abstract" as *;
+
+.login-layout {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .login-head {
+        width: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .welcome_eco {
+            position: absolute;
+            top: 120px;
+            left: 60px;
+            display: flex;
+            flex-direction: column;
+
+            .wel_to {
+                font-size: 4rem;
+                color: white;
+                font-weight: 700;
+            }
+            .eco {
+                color: $primary--light;
+                font-size: 4rem;
+                font-weight: 700;
+                // padding-left: 150px;
+            }
+        }
+
+        // @include themed() {
+        //     background-color: t($secondary);
+        //     color: t($text-white);
+        // }
+        // background: ;
+        background-image: url("../../../assets/homebanner.svg"),
+            linear-gradient(179.98deg, #04294b 0.02%, #6397c8 135.75%);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .bottom_logos {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 55%;
+        }
+    }
+
+    .login-body {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .eco-logo {
+            position: absolute;
+            right: 3vw;
+            top: 3vh;
+        }
+
+        .login-body-inner {
+            width: 40%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .login {
+                width: 100%;
+            }
+
+            .form-floating {
+                width: 100%;
+                // position: relative;
+                .form-control {
+                    background-color: transparent !important;
+                    border: none;
+                    border-radius: 0px;
+                    border-bottom: 1px solid black;
+                    outline: none;
+                }
+
+                label {
+                    padding: 1rem 0rem !important;
+                }
+            }
+            .car_end_logo {
+                // border: 2px solid red;
+
+                .eco-car-logo {
+                    width: 16rem;
+                    // border: 2px solid blue;
+                    position: absolute;
+                    bottom: 50px;
+                    right: 80px;
+                }
+            }
+        }
+    }
+}
+.password {
+    box-sizing: border-box;
+    position: relative;
+}
+.show-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

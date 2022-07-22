@@ -1,0 +1,26 @@
+.completed-appointment-list-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .completed-appointment-list-layout-header {
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+
+    .btn-navy-circle{
+      width: 30px;
+      height: 30px;
+    }
+    .completed-appointment-list-layout-title {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+  .completed-appointment-list {
+    width: 100%;
+    height: 93%;
+  }
+}

@@ -1,0 +1,74 @@
+@use "../../../../../scss/abstract" as *;
+
+.Calendar {
+  display: flex;
+
+  .table-class {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    
+
+    .table {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      border-collapse: separate !important;
+      border-spacing: 10px !important;
+
+      tbody {
+        display: block;
+        overflow: scroll;
+        width: 100% !important;
+        height: 100%;
+       
+          margin-right: auto !important;
+          margin-left: auto !important;
+        
+         
+      }
+
+      .today {
+        background-color: #6ddfd8 !important;
+        color: #fff;
+      }
+
+      .in-prev-month, .in-next-month {
+        opacity: 0.1;
+      }
+
+      th {
+        color: #6ddfd8;
+        border: none;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+        padding: 0px !important;     
+      }
+
+    
+      td {
+        padding: 0vh 1.5vh !important;
+        text-align: center;
+        color: black;
+        background-color: white !important;
+       
+        //border-radius: 5px;
+       
+        // @include xxlBreakPoint{
+        //   padding: 0vh 15px !important;
+        // }
+
+        @include xxxlBreakPoint{
+          padding: 0.4vh 1.5vh !important;
+        }
+
+      }
+
+      td:hover {
+        background-color: #6ddfd8 !important;
+        color: white;
+      }
+    }
+  }
+}

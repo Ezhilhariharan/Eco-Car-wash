@@ -1,0 +1,142 @@
+@use "../../../../../../../scss/abstract" as *;
+
+.view-store-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    .store-proDetails {
+        width: 30% !important;
+        height: auto !important;
+        // border: 1px solid red;
+        overflow: scroll !important;
+        span {
+            line-break: anywhere;
+            display: inline-block;
+        }
+        h5 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 200px;
+            height: 1.2em;
+            white-space: nowrap;
+        }
+        h6 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 200px;
+            height: 1.2em;
+            white-space: nowrap;
+            // border: 1px solid red;
+        }
+    }
+    .view-store-dashboard {
+        width: 65%;
+        height: 100%;
+
+        .dashboard-top-section {
+            height: 50%;
+            width: 100%;
+            border-radius: 10px !important;
+
+            @include themed() {
+                background-color: t($background-alt);
+                box-shadow: t($shadow-sm);
+            }
+
+            .card,
+            .card-body {
+                position: relative;
+                border-radius: 10px !important;
+
+                // .btn-navy-circle{
+                //     position: absolute;
+                //     width: 30px;
+                //     height: 30px;
+                //     top: 10px;
+                //     left: 10px;
+                // }
+                .buttons-navigate {
+                    position: absolute;
+                    top: 5px;
+                    left: 0px;
+                    width: 100px;
+                    height: 50px;
+                    // border:1px solid red;
+                    .btn-navy-circle {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        top: 10px;
+                        left: 5px;
+                    }
+                    .btn-navy-edit {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        top: 10px;
+                        left: 45px;
+                    }
+                }
+            }
+
+            .dashboard-store-cleaner-card {
+                height: 87%;
+                overflow: scroll !important;
+
+                @include themed() {
+                    background-color: t($secondary);
+                    color: t($background);
+                }
+            }
+            .dashboard-store-manager-card {
+                border-radius: 10px;
+
+                @include themed() {
+                    background-color: t($secondary);
+                    color: t($background);
+                }
+            }
+
+            h6 {
+                @include themed() {
+                    color: t($nav-text);
+                }
+            }
+        }
+    }
+
+    .dashboard-bottom-section {
+        height: 50%;
+        width: 100%;
+
+        .card,
+        .card-body {
+            height: 80%;
+            border-radius: 10px !important;
+
+            @include themed() {
+                background-color: t($background-alt);
+                box-shadow: t($shadow-sm);
+            }
+        }
+    }
+
+    .view-store-body {
+        width: 35%;
+        height: 100%;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrap-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .resizeText {
+        font-size: min(40px, 80px);
+    }
+}

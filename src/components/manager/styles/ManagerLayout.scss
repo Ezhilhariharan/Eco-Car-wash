@@ -1,0 +1,69 @@
+@use "../../../scss/abstract" as *;
+
+.manager-layout {
+    height: 100%;
+    width: 100%;
+
+    .manager-body {
+        height: calc(100% - 80px);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .p-datatable-tbody {
+            > tr {
+                cursor: context-menu !important;
+            }
+        }
+        .row > * {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+
+            // .manager-profile-picture {
+            //     border-radius: 50px;
+            //     overflow: hidden;
+            //     width: 50px;
+            //     height: 50px;
+
+            //     img {
+            //         width: 100%;
+            //         height: 100%;
+            //         object-fit: cover;
+            //     }
+            // }
+        }
+    }
+
+    input,
+    input:active,
+    input:focus,
+    textarea:focus {
+        text-decoration: none;
+        border: 1px solid #ced4da;
+        box-shadow: none !important;
+        background-color: ffffff;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    // .modal {
+    //     height: 100vh;
+
+    //     .modal-content {
+    //         height: 70vh;
+
+    //         @include themed() {
+    //             background-color: t($background-alt);
+    //         }
+
+    //         .modal-body {
+
+    //         }
+    //     }
+    // }
+    .btn-navy-create {
+        width: 60%;
+    }
+}

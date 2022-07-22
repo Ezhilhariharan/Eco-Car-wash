@@ -1,0 +1,27 @@
+@use "../../../../scss/abstract" as *;
+
+.financecartype {
+	height: 80vh;
+
+	.financecartype-list {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.p-datatable{
+		height: 100% !important; 
+
+		.p-datatable-scrollable-wrapper{
+			height: 100% !important;
+
+			.p-datatable-scrollable-view {
+				height: 100% !important;
+
+				.p-datatable-scrollable-body {
+					max-height: 90% !important;
+				}
+			}
+		}
+	}
+}

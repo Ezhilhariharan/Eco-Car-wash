@@ -1,0 +1,137 @@
+@use "../../../../../scss/abstract" as *;
+
+.image_name {
+    overflow: hidden;
+    // border: 1px solid red;
+    height: 80px;
+}
+.image {
+    // border: 1px solid red;
+    width: 105px !important;
+    min-width: 105px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    overflow: hidden;
+}
+.create-store-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .add-store {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        // overflow: scroll;
+        // background-color: black;
+
+        h2 {
+            font-weight: normal !important;
+        }
+
+        .create-store-form {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            padding: 3vh 3vw;
+            overflow: scroll !important;
+            // border: 1px solid red;
+            @include themed() {
+                background: t($background-alt);
+                color: t($text);
+                box-shadow: t($shadow-sm);
+            }
+
+            input[type="text"],
+            input[type="text"]:active,
+            input[type="text"]:hover,
+            input[type="email"],
+            input[type="email"]:active,
+            input[type="email"]:hover {
+                background-color: transparent !important;
+                border: none;
+                box-shadow: none !important;
+                resize: none;
+                outline: none;
+                height: 30px;
+                border-radius: 0 !important;
+                padding-bottom: 0px !important;
+                padding-left: 0px;
+
+                @include themed() {
+                    border-bottom: 1px solid t($text) !important;
+                }
+            }
+            textarea {
+                background-color: transparent !important;
+                border: none;
+                box-shadow: none !important;
+                outline: none;
+                border-radius: 0 !important;
+                padding-bottom: 0px !important;
+                padding-left: 0px;
+
+                @include themed() {
+                    border-bottom: 1px solid t($text) !important;
+                }
+            }
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            textarea {
+                @include themed() {
+                    background: t($input-focused);
+                }
+            }
+        }
+        .btn-navy-circle {
+            width: 30px;
+            height: 30px;
+        }
+        .btn-navy {
+            width: 10rem;
+        }
+
+        .card {
+            width: 85%;
+            height: 100%;
+            padding: 50px 0;
+            overflow: scroll;
+
+            @include themed() {
+                background-color: t($background-alt);
+                box-shadow: t($shadow-md);
+            }
+
+            .card-body {
+                width: 90%;
+
+                //  textarea, textarea:focus{
+                //     background-color: transparent;
+                //     border: none;
+                //     box-shadow: none !important;
+                //     resize: none;
+                //     outline: none;
+
+                //     @include themed(){
+                //         border-bottom:  1px solid t($text) !important;
+                //     }
+                //  }
+            }
+        }
+    }
+
+    .illustration {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        position: relative;
+        padding: 0 5vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

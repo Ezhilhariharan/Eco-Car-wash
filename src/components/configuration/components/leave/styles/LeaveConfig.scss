@@ -1,0 +1,46 @@
+@use "../../../../../scss/abstract" as *;
+
+.leaves-layout {
+    height: 100%;
+    width: 100%;
+
+    .leaves-title {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .leaves-add {
+        height: calc(20% - 2rem);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .leave-count {
+            display: flex;
+            align-items: center;
+            width: calc(100% - 15rem);
+
+            .leave-count-title {
+                font-weight: 600;
+            }
+            .leave-count-form {
+                width: 100%;
+                // border: 1px solid red;
+                .form-control {
+                    // border: 1px solid red !important;
+                    min-width: 50px !important;
+                    max-width: 150px !important;
+                }
+                .btn-navy {
+                    height: 40px !important;
+                    min-width: 70px !important;
+                    max-width: 100px !important;
+                }
+            }
+        }
+    }
+    .leaves-list {
+        height: 80%;
+    }
+}

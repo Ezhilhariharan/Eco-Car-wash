@@ -1,0 +1,14 @@
+@use '../../../../../scss/abstract' as *;
+
+.e-commerce-empty-layout{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.btn-navy{
+		width: 10vw;
+	}
+}

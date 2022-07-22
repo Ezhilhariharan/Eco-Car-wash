@@ -1,0 +1,114 @@
+@use "../../../../scss/abstract/" as *;
+
+// .customer-ratings {
+// 	width: 100%;
+// 	height: 100%;
+
+// 	border-radius: 10px;
+
+// 	@include themed() {
+// 		background: t($background-alt);
+// 		color: t($text-black);
+// 		box-shadow: t($shadow-sm);
+// 	}
+
+.card {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 0px !important;
+	text-align: center;
+	border-radius: 10px !important;
+	outline: none !important;
+	border: none !important;
+
+	@include themed() {
+		background: t($background-alt);
+		color: t($text-black);
+		box-shadow: t($shadow-sm);
+	}
+}
+
+.card-body {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px !important;
+	.cards_back {
+		background-color: #e7f8f7;
+		padding: 5px;
+		border-radius: 10px;
+		// border:1px solid red;
+		h5 {
+			font-size: 18px !important;
+		}
+	}
+}
+.profile-column {
+	// border:1px solid red;
+	// width:400px !important;
+}
+.bordering {
+	border: 1px solid green;
+}
+.userreview-modal {
+	.modal-content {
+		height: 500px !important;
+	}
+	.modal-body {
+		height: 100% !important;
+	}
+	.userreview-table {
+		// border:1px solid blue;
+		height: 100% !important;
+		.p-datatable {
+			// border: 1px solid red;
+			height: 360px !important;
+		}
+		.p-datatable-scrollable-wrapper{
+			// border: 1px solid blue;
+			min-height: 360px !important;
+		}
+		.p-datatable-scrollable-body{
+			// border: 1px solid blue;
+			min-height: 360px !important;
+		}
+		.p-datatable-tbody {
+			// border: 1px solid green;
+			min-height: 360px !important;
+		}
+	}
+}
+
+.customer-profile-picture {
+	border-radius: 50px;
+	overflow: hidden;
+	width: 60px;
+	height: 60px;
+	min-width: 60px !important;
+	min-height: 60px !important;
+	// border:1px solid red;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.checked {
+	color: orange;
+	border: none !important;
+	outline: none !important;
+}
+
+.customer-reviews-block {
+	height: 90%;
+	width: 100%;
+	overflow: scroll;
+}
+.customer-reviews-element {
+	height: 40%;
+	margin: 25px 10px 25px 0px;
+	text-align: justify;
+}
+.review-content {
+}

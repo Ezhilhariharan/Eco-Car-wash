@@ -1,0 +1,77 @@
+@use '../../../../../scss/abstract' as *;
+
+.service-config-layout{
+	width: 100%;
+	height: 100%;
+
+	.service-config-layout-header{
+		font-size: 2rem;
+	}
+
+	.service-config-body{
+		width: 100%;
+		height: 80%;
+		margin-top: 20px;
+		border-radius: 20px;
+		background: $primary-lightened;
+
+		@include themed(){
+			// background-color: t($background-alt);
+			box-shadow: t($shadow-sm);
+		}
+
+		.service-config-body-header{
+			width:100%;
+			height: 3.5rem;
+			border-radius: 20px 20px 0px 0px;
+			// background: $primary-lightened;
+			display: flex;
+			align-items: center;
+			padding: 0 20px;
+			
+			@include themed() {
+				border-bottom: 1px solid t($background);
+			}
+
+			.service-config-body-header-title{
+				font-size: 1.2rem;
+				font-weight: bold;
+			}
+
+			.service-config-body-header-tabs{
+				font-weight: 500;
+				border: none;
+				background: transparent;
+				@include themed() {
+					color: t($text-black);
+				}				
+			}
+
+			.active{
+				padding: 5px 10px;
+				border-radius: 5px;
+
+				@include themed(){
+					color: t($input-focused);
+					background: t($secondary);
+				}
+			}
+		}
+		.service-config-body-body{
+			width: 100%;
+			height: calc(100% - 3.5rem);
+			display: flex;
+			
+			.service-config-body-standard{
+				width: 50%;
+				height: 100%;
+				padding: 0 10px;
+			}
+			.service-config-body-premium{
+				width: 50%;
+				height: 100%;
+				padding: 0 10px;
+			}
+		}
+	}
+}

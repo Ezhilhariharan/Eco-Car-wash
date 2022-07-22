@@ -1,0 +1,50 @@
+@use "../../../scss/abstract" as *;
+
+.finance-layout {
+	width: 100%;
+	height: 100%;
+
+	.finance-header {
+		width: 100%;
+		height: 10%;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+	}
+	.finance-list {
+		width: 100%;
+		height: 90%;
+	}
+	.year-picker {
+		width: 100%;
+		height: 2.5rem;
+		z-index: auto;
+
+		.input-wrapper {
+			width: 100%;
+			height: 100%;
+		}
+		.picker-panel{
+			z-index: 100 !important;
+
+			a {
+				text-decoration: none;
+				@include themed() {
+					color: t($text-black);
+				}
+
+				&:hover{
+					text-decoration: underline;
+					@include themed() {
+						color: $text-black;
+					}
+				}
+			}
+			.selected-year {
+				@include themed() {
+					color: t($text-white);
+				}
+			}
+		}
+	}
+}

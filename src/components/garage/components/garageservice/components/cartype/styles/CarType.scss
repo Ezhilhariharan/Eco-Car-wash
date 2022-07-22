@@ -1,0 +1,50 @@
+@use '../../../../../../../scss/abstract' as *;
+
+.garage-car-type-selector{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.car-type-selector-header{
+		width: 10%;
+		font-size: 1.1rem;
+	}
+	.car-type-selector-body{
+		width: 90%;
+		display: flex;
+		align-items: center;
+		overflow-x: auto;
+		padding: 10px 5px;
+		// background: red;
+
+		.car-type-card{
+			padding: 10px 20px;
+			border-radius: 10px;
+			font-weight: 500;
+			transition: all 0.2s ease-in-out;
+			border: none;
+			margin-right: 15px;
+
+			@include themed(){
+				background: t($background-alt);
+				color: t($text-black);
+				box-shadow: t($shadow-sm);
+
+				&:hover{
+					background: t($secondary);
+					color: t($input-focused);
+				}
+			}
+		}
+		.car-type-card:last-child{
+			margin-right: 0;
+		}
+
+		.active{
+			@include themed(){
+				background: t($secondary);
+				color: t($input-focused);
+			}
+		}
+	}
+}

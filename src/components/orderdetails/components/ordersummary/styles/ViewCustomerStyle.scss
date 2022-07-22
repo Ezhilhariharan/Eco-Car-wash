@@ -1,0 +1,410 @@
+@use "../../../../../scss/abstract" as *;
+
+.view-cutomer-section {
+    width: 100%;
+    height: 100%;
+    .order_split {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        .circle_rotate {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid $secondary--dark;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            background: $secondary--dark;
+            color: white;
+        }
+    }
+
+    .customer-section-body {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .customer-profile-dashboard {
+            display: flex;
+            height: 100%;
+            width: 30%;
+            padding-right: 12px;
+            flex-direction: row;
+            @include lgBreakPoint {
+                width: 30%;
+            }
+            @include xlBreakPoint {
+                width: 30%;
+            }
+            @include xxlBreakPoint {
+                width: 30%;
+            }
+
+            .card {
+                .card-body {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .btn-navy-circle {
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        top: 10px;
+                        left: 5px;
+                    }
+                    .summary {
+                        // border: 2px solid blue;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .view-customer-services {
+            height: 100%;
+            width: 70%;
+            padding-left: 12px;
+            display: flex;
+
+            @include lgBreakPoint {
+                width: 80%;
+            }
+            @include xlBreakPoint {
+                width: 80%;
+            }
+            @include xxlBreakPoint {
+                width: 80%;
+            }
+            .card {
+                height: 100%;
+                width: 100%;
+
+                .card-body {
+                    padding: 25px;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+
+                    .car-type-section {
+                        width: 40%;
+                        height: 100%;
+                        @include lgBreakPoint {
+                            width: 40%;
+                        }
+                        @include xlBreakPoint {
+                            width: 40%;
+                        }
+                        @include xxlBreakPoint {
+                            width: 40%;
+                        }
+
+                        .car-type-details {
+                            width: 100%;
+                            height: 20%;
+                            padding: 2px;
+                            .car_type {
+                                font-size: 1.4em;
+                                font-weight: 600;
+                            }
+                            .box_splits {
+                                padding: 5px;
+                            }
+                        }
+
+                        .car-type-service {
+                            width: 100%;
+                            height: 60%;
+                            padding: 10px;
+
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+                            .services {
+                                font-size: 1.4em;
+                                font-weight: 600;
+                            }
+
+                            .box {
+                                // border: 1px solid red;
+                                overflow-y: scroll;
+                                height: 100%;
+                                max-height: 230px;
+                                -ms-overflow-style: none;
+                                scrollbar-width: none;
+                                overflow-y: scroll;
+                                .split_interior {
+                                    display: flex;
+                                    gap: 50px;
+                                    padding-top: 1vh;
+                                    .texts {
+                                        color: blue !important;
+                                        // font-size: 28px !important;
+                                    }
+                                    .standard {
+                                        border: 1px solid $standard_interior;
+                                        width: 20%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 3px;
+                                        color: white;
+                                        background: $standard_interior;
+                                    }
+                                }
+                                .back_datas {
+                                    .split_serices {
+                                        display: flex;
+                                        gap: 10px;
+                                        .datas_title {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .product_payment_pricing {
+                        height: 20%;
+                        display: flex;
+                        .left_pricing {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            @include xlBreakPoint {
+                                width: 100%;
+                                // border:2px solid red;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                            .payment_price {
+                                font-size: 1.4em;
+                                font-weight: 600;
+                                @include xlBreakPoint {
+                                    font-size: 1.2em;
+                                }
+                            }
+                            .debit_card {
+                                color: $text-grey--light;
+                            }
+                            .discount {
+                                color: $text-grey--light;
+                            }
+                        }
+                        .right_pricing {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+
+                            .digital_time {
+                                .time {
+                                    border: 1px solid rgba(0, 0, 0, 0.14);
+                                    border-radius: 5px;
+                                    font-size: 24px;
+                                    width: 140px;
+                                    height: 46px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    @include xlBreakPoint {
+                                        width: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right_split_photos {
+                        width: 60%;
+                        height: 100%;
+                        overflow-x: hidden;
+                        @include lgBreakPoint {
+                            width: 60%;
+                        }
+                        @include xlBreakPoint {
+                            width: 60%;
+                            overflow: hidden;
+                        }
+                        @include xxlBreakPoint {
+                            width: 60%;
+                        }
+                        .start {
+                            // border: 1px solid red;
+                            height: 60%;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+                            overflow: hidden;
+                            .photo_name {
+                                font-size: 1.4em;
+                                font-weight: 600;
+                            }
+                            .before {
+                                width: 750px;
+                            }
+                            .slider_after {
+                                .before_after {
+                                    // border: 1px solid red;
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: center !important;
+                                    align-items: center !important;
+                                    width: 220px !important;
+                                    height: 120px;
+                                    img {
+                                        width: auto;
+                                        height: auto;
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                    }
+                                }
+                            }
+                            .show_image {
+                                display: flex;
+                                justify-content: center !important;
+                                align-items: center !important;
+                                width: 100% !important;
+                                height: 400px;
+                                img {
+                                    width: auto;
+                                    height: auto;
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+                            }
+                            .slider_before {
+                                .before_after {
+                                    // border: 1px solid red;
+                                    cursor: pointer;
+                                    display: flex;
+                                    justify-content: center !important;
+                                    align-items: center !important;
+                                    width: 220px !important;
+                                    height: 120px;
+                                    img {
+                                        width: auto;
+                                        height: auto;
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .middle {
+                            height: 20%;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+                            .reviews {
+                                height: 20%;
+                                .review {
+                                    font-size: 1.4em;
+                                    font-weight: 600;
+                                }
+                                .reviews-profile-picture {
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    width: 50px;
+                                    height: 50px;
+                                }
+                                .split_profiles {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .inside_split_profiles {
+                                        display: flex;
+                                    }
+                                }
+                                .des {
+                                    padding-top: 2vh;
+                                    .description {
+                                        font-size: 17px;
+                                        color: $text-grey--light;
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+
+                            .ratting {
+                                .stars {
+                                    display: flex;
+                                    gap: 5px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .checked {
+                                        color: orange;
+                                    }
+                                }
+                            }
+                        }
+                        .end {
+                            height: 20%;
+
+                            .product {
+                                height: 100%;
+                                display: flex;
+                                padding: 20px;
+                                .left_product {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 50%;
+
+                                    .products {
+                                        font-size: 24px;
+                                        font-weight: 600;
+                                    }
+                                    .cars_perfume {
+                                        font-size: 20px;
+                                        padding-top: 2vh;
+                                    }
+                                }
+                                .right_product {
+                                    display: flex;
+                                    flex-direction: column;
+                                    width: 50%;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .btn_export {
+                                        width: 268px;
+                                        height: 40px;
+                                        border-radius: 10px;
+                                        border: none;
+                                        outline: none;
+                                        color: white;
+                                        font-size: 20px;
+                                        font-weight: "Gilroy-Bold";
+                                        background: $back_export_color;
+                                        text-decoration: none;
+                                        @include lgBreakPoint {
+                                            width: 100px;
+                                        }
+                                        @include xlBreakPoint {
+                                            width: 200px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                        @include xxlBreakPoint {
+                                            width: 200px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

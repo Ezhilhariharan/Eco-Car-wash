@@ -1,0 +1,23 @@
+@use "../../../../../scss/" as *;
+
+.orderlist-layout {
+    width: 100%;
+    height: 100%;
+
+     .orderlist-layout-header {
+        width: 100%;
+        height: 7%;
+        display: flex;
+        .buttons
+        {
+            display: flex;
+            gap:30px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .orderlist-layout-body {
+        width: 100%;
+        height: 93%;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../../../../scss/abstract/" as *;
+
+.cards {
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .horizontal {
+        height: 20vh !important;
+        margin: auto;
+    }
+}

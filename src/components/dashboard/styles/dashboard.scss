@@ -1,0 +1,352 @@
+@use "../../../scss/abstract" as *;
+
+.dashboard-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .dashboard-left {
+        width: 100%;
+        height: 100%;
+        min-width: 13rem;
+        max-width: 20rem;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-right: 20px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+
+        .analytics-box {
+            flex: 1;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            position: relative;
+            border-radius: 10px;
+            @include themed() {
+                background: t($background-alt);
+                box-shadow: t($shadow-sm);
+            }
+
+            .analytics-left {
+                width: 30%;
+                height: 100%;
+                border-radius: 10px;
+                background-color: $primary-lightened;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i {
+                    font-size: 33px;
+                    color: #04294b !important;
+                    opacity: 0.72;
+                }
+            }
+            .analytics-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding-left: 15px;
+                .title {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    color: red;
+                    color: $back_text_color;
+                    //    color: $nav-text--dark;
+                    // .title {
+                    // // color: $back_text_color;
+
+                    // }
+                }
+                .number {
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+            }
+            .btn-navy-circle {
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                right: 10px;
+                bottom: 15px;
+            }
+            .btn-white-circle {
+                width: 35px;
+                height: 35px;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
+        }
+    }
+    .dashboard-right {
+        width: 100%;
+        height: 100%;
+        min-width: 50vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0px 2vw;
+        flex: 1;
+
+        .year-picker {
+            width: 100%;
+            height: 2.5rem;
+            z-index: auto;
+
+            .input-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+            .picker-panel {
+                z-index: 100 !important;
+
+                a {
+                    text-decoration: none;
+                    @include themed() {
+                        color: t($text-black);
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                        @include themed() {
+                            color: $text-black;
+                        }
+                    }
+                }
+                .selected-year {
+                    @include themed() {
+                        color: t($text-white);
+                    }
+                }
+            }
+        }
+
+        .start-chart-box {
+            width: 100%;
+            height: 50%;
+            padding: 10px 20px;
+            border-radius: 10px;
+
+            @include themed() {
+                background: t($background-alt);
+                box-shadow: t($shadow-sm);
+            }
+            .inside_split {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                height: 10%;
+                .round {
+                    display: flex;
+                    gap: 10px;
+
+                    .circle_1 {
+                        @include themed() {
+                            color: t($primary);
+                        }
+                    }
+                }
+                .select-dates {
+                    border: none;
+                    width: 12rem;
+                    padding: 10px;
+                    background: #ffffff;
+                    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                }
+                .select-dates:focus {
+                    border: none !important;
+                }
+                .select-dates:active {
+                    border: none !important;
+                }
+                .input-date {
+                    border: none;
+                    width: 12rem;
+                    padding: 10px;
+                    background: #ffffff;
+                    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                }
+                #st {
+                    border: none;
+                    border: 2px solid red;
+                }
+            }
+            .chart {
+                height: 90%;
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+            }
+        }
+        .middle-chart-box {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            gap: 20px;
+            flex: 1;
+
+            .starts-chart-box {
+                width: 33.5%;
+                border-radius: 10px;
+                padding: 5px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                @include themed() {
+                    background: t($background-alt);
+                    box-shadow: t($shadow-sm);
+                }
+                .text-content-main {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 70px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    height: 20%;
+                    .start-content-left {
+                        .circle_1 {
+                            @include themed() {
+                                color: t($primary);
+                            }
+                        }
+                    }
+                    .end-content-right {
+                        padding: 4px 7px;
+                        border-radius: 10px;
+                        background-color: $back_exterior;
+                        display: flex;
+                        gap: 10px;
+                        .circle_2 {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .service-charts-image {
+                    height: 80%;
+
+                    .content {
+                        display: none;
+                    }
+                    .active-content {
+                        display: block;
+                    }
+                }
+            }
+            .middles-chart-box {
+                width: 33% !important;
+                border-radius: 10px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow-x: auto;
+
+                @include themed() {
+                    background: t($background-alt);
+                    box-shadow: t($shadow-sm);
+                }
+                .header-title {
+                    width: 100%;
+                    height: 15% !important;
+                    min-height: 40px !important;
+                    // border:1px solid red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: $frosted-light;
+                    border-radius: 10px 10px 0px 0px;
+                    padding: 0px 20px;
+
+                    .view-more {
+                        cursor: pointer;
+                        color: $text-grey--dark;
+                        // @include themed() {
+                        //     color: t($text-grey--dark);
+                        // }
+                    }
+                }
+                .body-circles {
+                    width: 100%;
+                    height: 25%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 40px;
+                    text-align: center;
+                    border-bottom: 1px solid lightgray;
+                    margin-top: 5px;
+                    .number-percentage {
+                        margin-top: 5px;
+                    }
+                }
+                .footer-content {
+                    width: 100%;
+                    height: 60%;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    display: flex;
+                    .left-footer-content {
+                        width: 85%;
+                        .inside-footer-split {
+                            width: 100%;
+                            display: flex;
+                            .left-footer-number {
+                                width: 6%;
+                            }
+                            .right-footer-content {
+                                width: 94%;
+                            }
+                        }
+                    }
+                    .right-footer-content {
+                        width: 15%;
+                    }
+                }
+            }
+            .ends-chart-box {
+                width: 33.5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                @include themed() {
+                    background: t($background-alt);
+                    box-shadow: t($shadow-sm);
+                }
+                .header-title {
+                    width: 100%;
+                    height: 15%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: $frosted-light;
+                    border-radius: 10px 10px 0px 0px;
+                    padding: 10px 20px;
+                    .view-more {
+                        cursor: pointer;
+                        color: $text-grey--dark;
+                        // @include themed() {
+                        //     color: t($text-grey--dark);
+                        // }
+                    }
+                }
+                .chart-rounds {
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+}

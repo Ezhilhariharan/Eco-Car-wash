@@ -1,0 +1,31 @@
+@use "../../../../../../../scss/abstract" as *;
+
+.assign-manager {
+    height: 100%;
+    width: 100%;
+
+    .manager-head {
+        height: 15%;
+        width: 100%;
+        padding: 0px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manager-list {
+        height: 75%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        // border: 1px solid red !important;
+        @include themed() {
+            background-color: t($background-alt) !important;
+        }
+
+        .profile-picture {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            padding: 0 !important;
+        }
+    }
+}

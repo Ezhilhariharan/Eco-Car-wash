@@ -1,0 +1,52 @@
+@use '../../../../../scss/abstract' as *;
+
+.coupons-layout{
+  width: 100%;
+  height: 100%;
+
+  .coupons-layout-title{
+    font-size: 2rem;
+  }
+  .coupon-type-specification{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+
+    .coupon-type-card{
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      border: none;
+      margin-right: 15px;
+      cursor: pointer;
+  
+      @include themed(){
+        background: t($background-alt);
+        color: t($text-black);
+        box-shadow: t($shadow-sm);
+  
+        &:hover{
+          background: t($secondary);
+          color: t($input-focused);
+        }
+      }
+      @include noSelectionAllowed;
+    }
+    .active{
+      @include themed(){
+        background: t($secondary);
+        color: t($input-focused);
+      }
+    }
+    .btn-white{
+      width: 5rem;
+    }
+  }
+  .coupon-list{
+    width: 100%;
+    height: 85%;
+  }
+}
